@@ -1,7 +1,7 @@
 accelerate==0.7.1
 albumentations==1.1.0
 ants==0.0.7
-antspyx==0.3.5
+antspyx==0.3.8
 clip==0.2.0
 einops==0.4.1
 einops_exts==0.0.3
@@ -14,7 +14,7 @@ kornia==0.6.7
 monai==1.0.1
 natsort==8.2.0
 nibabel==3.2.1
-numba==0.54.0
+numba
 numpy==1.20.3
 omegaconf==2.1.2
 opencv_python==4.5.4.60
@@ -27,7 +27,7 @@ requests==2.26.0
 rich==13.3.1
 rotary_embedding_torch==0.1.5
 scikit_image==0.18.3
-scikit_learn==1.0.1
+scikit_learn==1.0.4
 scipy==1.7.2
 seaborn==0.11.2
 SimpleITK==2.2.1
@@ -43,4 +43,4 @@ video_diffusion_pytorch==0.5.3
 wandb==0.12.19
 matplotlib==3.5.2
 hydra-colorlog
-
+cmake
