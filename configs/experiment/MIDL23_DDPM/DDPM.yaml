@@ -22,7 +22,7 @@ model:
     residualmode: l1
     OpenaiUnet: True # use openai unet
     conv_resample: True
-    noisetype: simplex
+    noisetype: gaussian
     dropout_unet: 0.0
 num_folds: 1
 logger:
