@@ -5,5 +5,5 @@ model_checkpoint:
     auto_insert_metric_name: False
     save_last: True
     mode: "min"
-    dirpath: "checkpoints/"
+    dirpath: "/content/drive/MyDrive/Tez_Chck/pDDPM/checkpoints/"
     filename: "epoch-{epoch}_step-{step}_loss-{val/Loss_comb:.2f}"
