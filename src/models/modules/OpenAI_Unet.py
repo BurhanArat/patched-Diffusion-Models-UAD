@@ -708,6 +708,7 @@ class UNetModel(nn.Module):
         :param context: conditioning plugged in via crossattn
         :return: an [N x C x ...] Tensor of outputs.
         """
+        
         hs = []
         emb = self.time_embed(timestep_embedding(timesteps, self.model_channels))
         

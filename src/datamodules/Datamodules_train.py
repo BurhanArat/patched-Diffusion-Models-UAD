@@ -35,13 +35,17 @@ class IXI(LightningDataModule):
             self.csv[state]['setname'] = 'IXI'
 
 
-            self.csv[state]['img_path'] = cfg.path.pathBase + '/Data/' + self.csv[state]['img_path']
-            self.csv[state]['mask_path'] = cfg.path.pathBase + '/Data/' + self.csv[state]['mask_path']
+            #self.csv[state]['img_path'] = cfg.path.pathBase + '/Data/' + self.csv[state]['img_path']
+            #self.csv[state]['mask_path'] = cfg.path.pathBase + '/Data/' + self.csv[state]['mask_path']
+            self.csv[state]['img_path'] = self.csv[state]['img_path']
+            self.csv[state]['mask_path'] = self.csv[state]['mask_path']
             self.csv[state]['seg_path'] = None
-
-            if cfg.mode == 't2': 
-                self.csv[state] = self.csv[state][self.csv[state].img_name.isin(keep_t2['0'].str.replace('t2','t1'))]
-                self.csv[state]['img_path'] = self.csv[state]['img_path'].str.replace('t1','t2')
+            #print(self.csv[state]['img_path'][0])
+            #print(self.csv[state]['settype'][0])
+            #print(self.csv[state]['setname'][0])
+            #if cfg.mode == 't2': 
+                #self.csv[state] = self.csv[state][self.csv[state].img_name.isin(keep_t2['0'].str.replace('t2','t1'))]
+                #self.csv[state]['img_path'] = self.csv[state]['img_path'].str.replace('t1','t2')
 
     def setup(self, stage: Optional[str] = None):
         # called on every GPU
@@ -51,7 +55,8 @@ class IXI(LightningDataModule):
                 self.val = create_dataset.Train(self.csv['val'][0:50],self.cfg)
                 self.val_eval = create_dataset.Eval(self.csv['val'][0:8],self.cfg)
                 self.test_eval = create_dataset.Eval(self.csv['test'][0:8],self.cfg)
-            else: 
+            else:
+                #print(self.csv['train'][0])
                 self.train = create_dataset.Train(self.csv['train'],self.cfg) 
                 self.val = create_dataset.Train(self.csv['val'],self.cfg)
                 self.val_eval = create_dataset.Eval(self.csv['val'],self.cfg)
