@@ -57,14 +57,14 @@ cfg:
   contrastRange: (0.75,1.25)
   
   modelpath: ${data_dir}/Data/pretrained_2D_model/
-  num_workers: 2
-  batch_size: 8
+  num_workers: 8
+  batch_size: 16
   lr : 0.0001
   droplast: True
 
 
   # Evaluation
-  mode: t1
+  mode: t2
   resizedEvaluation: True
   testsets: # specify which test sets to evaluate!
   - Datamodules_eval.Brats21

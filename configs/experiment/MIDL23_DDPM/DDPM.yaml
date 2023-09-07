@@ -27,12 +27,12 @@ model:
 num_folds: 1
 logger:
   wandb:
-    project: MIDL23_DDPM
+    project: DDPM_2D_7_9_23
 
 ckpt_path: best 
 
 trainer:
   max_epochs: 1600
-  precision: 32 
+  precision: 16 
 name : DDPM_2D
 seed: 3141
