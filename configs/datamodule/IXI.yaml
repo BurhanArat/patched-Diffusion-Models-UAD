@@ -57,7 +57,7 @@ cfg:
   contrastRange: (0.75,1.25)
   
   modelpath: ${data_dir}/Data/pretrained_2D_model/
-  num_workers: 8
+  num_workers: 4
   batch_size: 16
   lr : 0.0001
   droplast: True
