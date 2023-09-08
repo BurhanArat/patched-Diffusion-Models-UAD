@@ -189,7 +189,7 @@ def get_checkpoint(cfg, path):
     checkpoint_path = path
     checkpoint_to_load = cfg.get("checkpoint",'last') # default to last.ckpt 
     all_checkpoints = os.listdir(checkpoint_path + '/checkpoints')
-    hparams = get_yaml(path+'/csv//hparams.yaml')
+    hparams = get_yaml(path+'/csv/hparams.yaml')
     wandbID = hparams['run_id']
     checkpoints = {}
     for fold in range(cfg.get('num_folds',1)):
